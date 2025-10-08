@@ -1,11 +1,11 @@
 // Type consversion
-
+/*
 let num = true
 // console.log(typeof num);
 // console.log(num);
 console.log(Number(num));
 console.log(typeof Number(num));
-
+*/
 // ---- NaN => Not a Number ; typeof NaN => number ----
 
 // ------------ Anything => Number() -------------
@@ -27,6 +27,7 @@ console.log("newName is : " + newName);
 // ture => "true" ; false => "false"
 
 // ------------ Anything => Boolean() -------------
+/*
 let isLogged = "";
 console.log(`type of isLogged : ${typeof isLogged}`);
 console.log(`isLogged : ${isLogged}`);
@@ -37,3 +38,21 @@ console.log(`newLogged : ${newLogged}`);
 // 0 => false ; any number except 0 => true
 // null => false ; undefined => null;
 // "kun878" => true ; "" => false
+*/
+
+// ******************** Operations ****************
+
+let str1 = "Hello! ";
+let str2 = "Kundan";
+let str3 = str1 + str2;
+console.log(str3);
+
+console.log(`(1+"2") : ${(1+"2")} :  ${typeof (1+"2")}`);
+console.log(`("1"+"2") : ${("1"+"2")} :  ${typeof ("1"+"2")}`);
+console.log(`("1"+2) : ${("1"+2)} : ${typeof ("1"+2)}`);
+
+console.log(1+2+"2"); // if string is at end then i. add ; ii.concat into string (for + operator)
+console.log("1"+2+2); // if s tring is at start then i. all concat as string (for + operator)
+
+// + operator convert into => string 
+
