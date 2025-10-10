@@ -39,13 +39,48 @@ const obj2 = {3:"a",4:"b"}
 //---------- Important --------------
 // we can get access of keys : similar for values
 
+/*
 console.log(Object.keys(tinderUser)); // return value as string[] (In array format)
 console.log(Object.values(tinderUser)); // return value as string[] (In array format)
 console.log(Object.entries(tinderUser)) // return array of array ([key value],[key value]...)
 
 console.log(tinderUser.hasOwnProperty('isLogged'));
 
+*/
 
 // ------------ 2. Singleton Object ------------------
-//const tinderUser = new Object()
+//object using Constructor method
+//  //const tinderUser = new Object()
 
+
+
+// ----------------- Destructure --------------------
+
+const course = {
+    coursename : "js in hindi",
+    price : "599",
+    courseInstructor : "Hitesh"
+}
+
+// const {courseInstructor} = course  // destructure :  {property} = ObjectName
+//console.log(courseInstructor);
+
+const {courseInstructor : instructor} = course  // destructure :  {property : shortName} = ObjectName
+console.log(instructor);
+
+// JSON : JavaScript object notation
+
+// -------- JSON Format ------
+// {
+//     "name":"Kundan",
+//     "course":"DSA in hindi",
+//     "price": "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+// API: randomUser me 
