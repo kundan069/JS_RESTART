@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body style="background: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavScript</li>
+    </ul>
+</body>
+<script>
+    // function addLang(langName){
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${langName}`;
+    //     const temp = document.querySelector(".language").appendChild(li);
+    //     console.log(temp);
+    // }
+    //addLang('Java')
+
+    function addOptiLang(langName){
+        const li = document.createElement('li');
+            li.appendChild(document.createTextNode(`${langName}`))
+            document.querySelector('.language').appendChild(li);
+    }
+    addOptiLang("Python")
+    addOptiLang("Ruby")
+
+
+
+    //EDIT 
+
+    // 1#.
+    const secondLanguage = document.querySelector("li:nth-child(2)")
+    secondLanguage.innerHTML = "C#"
+
+    // 2#.
+    const newLi = document.createElement("li")
+    newLi.textContent = 'CPP'
+    secondLanguage.replaceWith(newLi)
+
+
+    //REMOVE
+    const firstLanguage = document.querySelector("li:first-child")
+    firstLanguage.remove();
+
+</script>
+</html>
