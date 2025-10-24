@@ -1,0 +1,39 @@
+<!-- ##.Imp Note : XMLhttpRequest -> study , Ajax -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #212121; color: #fff;">
+    <h1>Welcome!</h1>
+    <img src="" alt="">
+</body>
+<script>
+
+const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+const xhr = new XMLHttpRequest();
+xhr.open('GET', requestUrl)
+xhr.onreadystatechange = function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState === 4){
+        const data = JSON.parse(this.responseText)
+        console.log(data);
+        console.log(data.avatar_url);
+        document.querySelector('img').setAttribute('src' , 'https://avatars.githubusercontent.com/u/11613311?v=4')
+        document.querySelector('img').setAttribute('alt' , 'image')
+    }
+}
+xhr.send();
+
+
+
+// to do :   photo url  || follower
+//           create a card   | btn click
+</script>
+</html>
+
+
